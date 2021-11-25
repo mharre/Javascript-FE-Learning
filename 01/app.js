@@ -105,3 +105,154 @@
 
 // console.log(sum);
 // console.log(typeof sum);
+
+// const num1 = 100;
+// const num2 = 50;
+// let val;
+
+// simple math
+// val = num1 + num2
+
+// MATH object
+// val = Math.PI;
+// val = Math.E;
+// val = Math.round(2.4);
+// val = Math.ceil(2.1);
+// val = Math.floor(2.8);
+// val = Math.sqrt(64);
+// val = Math.abs(-1);
+// val = Math.pow(8,2)
+// val = Math.min(1,2,3,4)
+// val = Math.max(1,2,3,4)
+// val = Math.random(); // random decimal
+// val = Math.floor(Math.random() * 21);
+
+// console.log(val);
+
+// const firstName = 'Bobb'
+// const lastName = 'Smith'
+// const str = 'Hello my name is fuck'
+
+// val = firstName + lastName
+// val = firstName + ' ' + lastName
+// val = 'Brad ';
+// val +='Smith';
+
+// string methods
+// val = firstName.length;
+// val = firstName.concat(' ', lastName);
+// val = firstName.toUpperCase();
+// val = firstName[1];
+// val = firstName.indexOf('b');
+// val = firstName.lastIndexOf('b');
+// val = firstName.charAt('2');
+// val = firstName.charAt(firstName.length - 1);
+// val = firstName.substring(0,4);
+// val = firstName.slice(0,4);
+// val = firstName.slice(-3);
+// val = str.split(' ');
+// val = str.replace('fuck', 'Shit');
+// val = str.includes('Hello');
+
+// console.log(val);
+
+// TEMPLATE LITERALS
+// const fname = 'John';
+// const age = 30;
+// const job = 'Web Developer';
+// const city = 'Miami';
+// let html;
+
+// without template literals (es5 SUCKSSSSS )
+// html = '<ul><li>Name: ' + fname + '</li><li>Age: ' + age + '</li></ul>';
+// document.body.innerHTML = html;
+
+// WITH TEMPLATE STRINGS (LITERALS)
+
+// function hello(){
+//     return 'hello';
+// }
+
+// html = `
+//     <ul>
+//         <li>Name: ${fname}</li>
+//         <li>Age: ${age}</li>
+//         <li>Job: ${job}</li>
+//         <li>City: ${city}</li>
+//         <li>${2 + 2}</li>
+//         <li>${hello()}</li>
+//         <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+//     </ul>
+// `;
+
+// document.body.innerHTML = html;
+
+// ARRAYS AND METHODS
+// const numbers = [1,2,3,4,31,366,842,342];
+// const numbers2 = new Array(1,2,3,4,5);
+// const fruit = ['apple', 'orange', 'banana']
+// const mixed = ['string', 1, true, null, undefined, {a:1,b:1}, new Date()];
+
+// let val;
+// val = numbers.length;
+// val = Array.isArray(numbers);
+// val = numbers[7];
+// numbers[0] = 33
+// val = numbers.indexOf(366);
+// numbers.push(250); //add to end
+// numbers.unshift(120); // add to front
+// numbers.pop(); // pop off end
+// numbers.shift(); // remove from front
+// numbers.splice(1,3);
+// numbers.reverse();
+// val = numbers.concat(numbers2);
+// val = numbers.sort(); //SORTING BY FIRST VALUE, use "compare" func
+// val = numbers.sort(function(x,y){
+//     return x - y
+// })
+
+// function under_50(num){
+//     return num < 50;
+// } 
+// val = numbers.find(under_50); //finds first instance of num under 50
+
+// console.log(numbers);
+// console.log(val);
+
+// OBJECT LITERALS
+// const person = {
+//     firstName: 'Steve',
+//     lastName: 'Smith',
+//     age: 30,
+//     email: 'steve@gmail.com',
+//     hobbies: ['music', 'sports'],
+//     address: {
+//         city: 'Miami',
+//         state: 'FL'
+//     },
+//     getBirtYear: function(){
+//         return 2021-this.age;
+//     }
+// }
+
+// let val;
+
+// val = person;
+// val = person.firstName;
+// val = person['firstName'];
+// val = person.hobbies[0]
+// val = person.address.city
+// val = person.address['city']
+// val = person.getBirtYear();
+
+// console.log(val);
+
+// const people = [
+//     {fname: 'John', age:30},
+//     {fname: 'Bob', age:35},
+//     {fname: 'Nancy', age:25}
+// ]
+
+// for(let i = 0; i < people.length; i++){
+//     console.log(people[i].fname);
+// }
