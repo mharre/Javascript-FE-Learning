@@ -256,3 +256,100 @@
 // for(let i = 0; i < people.length; i++){
 //     console.log(people[i].fname);
 // }
+
+// DATE AND TIME
+// let val;
+// const today = new Date();
+// let birthday = new Date('9-10-1981 11:25:00');
+// birthday = new Date('September 10 1981');
+// birthday = new Date('09/10/81');
+
+// val = today.getMonth(); //0 based, january = 0
+// val = today.getDate();
+// val = today.getDay(); 
+// val = today.getFullYear();
+// val = today.getHours();
+// val = today.getMinutes();
+// val = today.getSeconds();
+// val = today.getTime(); //amount of seconds that have passed since jan 1 1970?
+
+// birthday.setMonth(2);
+// birthday.setDate(12);
+// birthday.setFullYear(1900);
+// birthday.setHours(15);
+// birthday.setMinutes(30);
+// birthday.setSeconds(11);
+
+// console.log(birthday);
+
+// COMPARISON OPs
+// if(something){
+//     do something
+// } else {
+//     do something else
+// }
+
+// const id = 100;
+
+// if(id == 100){
+//     console.log('yes');
+// } else {
+//     console.log('no');
+// }
+// // TESTS TYPE AND VALUE INSTEAD OF JUST VALUE
+// if(id === 100){
+//     console.log('yes');
+// } else {
+//     console.log('no');
+// }
+
+// if(id != 100){
+//     console.log('yes');
+// } else {
+//     console.log('no');
+// }
+// // TESTS TYPE AND VALUE INSTEAD OF JUST VALUE
+// if(id !== 100){
+//     console.log('yes');
+// } else {
+//     console.log('no');
+// }
+
+// // TESTING IF UNDEFINED
+// if(typeof id !== 'undefined'){
+//     console.log(`The ID is: ${id}`);
+// } else {
+//     console.log('NO ID');
+// }
+
+// ELSE IF
+// const color = 'yellow'
+
+// if(color === 'red'){
+//     console.log('red');
+// } else if(color === 'blue'){
+//     console.log('blue');
+// } else {
+//     console.log(`${color}`)
+// }
+
+// LOGICAL OPERATORS
+// const fname = 'Steve';
+// const age = 20;
+
+// if(age > 0 && age < 12){
+//     console.log(`${fname} is a child`);
+// } else if (age >= 13 && age <= 19){
+//     console.log(`${fname} is a teenager`);
+// } else {
+//     console.log(`${fname} is something else`);
+// }
+
+// if(age < 16 || age > 65){
+//     console.log(`${fname} cannot run in the race`);
+// } else {
+//     console.log(`${fname} is registered`);
+// }
+
+// ? if, : else
+// console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
