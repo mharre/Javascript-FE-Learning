@@ -1,7 +1,7 @@
 // Log to Console, any datatypes can be logged
 //  can also log objects, arrays etc
 
-// console.log('Hello World'); 
+// console.log('Hello World');
 // console.log([1,2,3]);
 // console.log({a:1, b:2});
 // console.table({a:1, b:2});
@@ -10,12 +10,12 @@
 // console.clear();
 
 // console.time('Identifier')
-//     console.log('Hello World'); 
-//     console.log('Hello World'); 
-//     console.log('Hello World'); 
-//     console.log('Hello World'); 
-//     console.log('Hello World'); 
-//     console.log('Hello World'); 
+//     console.log('Hello World');
+//     console.log('Hello World');
+//     console.log('Hello World');
+//     console.log('Hello World');
+//     console.log('Hello World');
+//     console.log('Hello World');
 // console.timeEnd('Identifier');
 
 // console.clear();
@@ -213,7 +213,7 @@
 
 // function under_50(num){
 //     return num < 50;
-// } 
+// }
 // val = numbers.find(under_50); //finds first instance of num under 50
 
 // console.log(numbers);
@@ -266,7 +266,7 @@
 
 // val = today.getMonth(); //0 based, january = 0
 // val = today.getDate();
-// val = today.getDay(); 
+// val = today.getDay();
 // val = today.getFullYear();
 // val = today.getHours();
 // val = today.getMinutes();
@@ -353,3 +353,84 @@
 
 // ? if, : else
 // console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+
+// SWITCHES, useful when lots of else if conditions
+// const color = 'asdasd';
+
+// switch(color){
+//     case 'red':
+//         console.log('color is red');
+//         break;
+//     case 'blue':
+//         console.log('color is blue');
+//         break;
+//     default:
+//         console.log('color is not red or blue');
+//         break;
+// }
+
+// let day;
+
+// switch(new Date().getDay()){
+//     case 0:
+//         day = 'Sunday';
+//         break;
+//     case 1:
+//         day = 'Monday';
+//         break;
+//     case 2:
+//         day = 'Tuesday';
+//         break;
+//     case 3:
+//         day = 'Wednesday';
+//         break;
+//     case 4:
+//         day = 'Thursday';
+//         break;
+//     case 5:
+//         day = 'Friday';
+//         break;
+//     case 6:
+//         day = 'Saturday';
+//         break;
+// }
+
+// console.log(`Today is: ${day}`);
+
+// // FUNCS
+// function greet(firstName='Test'){
+//     return `Hello ${firstName}`;
+// }
+
+// const square = function(x){
+//     return x*x;
+// };
+
+// console.log(square(2));
+
+// IMMEDIATELY INVOKEABLE EXPRESSIONS - IIFES
+// (function(){
+//     console.log('IIFE Ran...');
+// })();
+
+// (function(name){
+//     console.log(`Hello ${name}`);
+// })('Bob');
+
+// // PROPERTY METHODS
+// const todo = {
+//     add: function(){
+//         console.log('Add todo...');
+//     },
+//     edit: function(id){
+//         console.log(`Edit todo ${id}`);
+//     }
+// }
+
+// todo.delete = function(){
+//     console.log('delete todo');
+// }
+
+// todo.add();
+// todo.edit(22);
+// todo.delete();
