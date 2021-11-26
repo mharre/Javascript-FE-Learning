@@ -434,3 +434,96 @@
 // todo.add();
 // todo.edit(22);
 // todo.delete();
+
+// // LOOPS
+// for(let i=0; i<10; i++){
+//     if(i===2){
+//         console.log(`${i} is my favorite number`);
+//         continue;
+//     }
+//     if(i===5){
+//         break;
+//     }
+//     console.log(i);
+// }
+
+// let i = 0;
+// while(i<10){
+//     console.log(i);
+//     i++
+// }
+
+// let i = 0;
+// do {
+//     console.log(i);
+//     i++
+// }
+
+// while(i<10);
+
+const cars = ['ford', 'acura', 'honda'];
+
+// for(let i=0; i<cars.length; i++){
+//     console.log(i, cars[i]);
+// }
+
+// cars.forEach(function(car, index){
+//     console.log(`${index}: ${car}`);
+// });
+
+// const users = [
+//     {id:1, name:'John'},
+//     {id:2, name:'Sara'},
+//     {id:3, name:'Karen'}
+// ]
+
+// const ids = users.map(function(user){
+//     return user.id;
+// })
+
+// console.log(ids);
+
+// // FOR IN LOOP USUALLY TO LOOP THROUGH OBJECTS
+// const user = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     age: '303'
+// }
+// for(let x in user){
+//     console.log(`${x}: ${user[x]}`);
+// }
+
+// WINDOW OBJECT, METHODS, and PROPERTIES
+// const input = prompt();
+// alert(input);
+
+// if(confirm('Are you sure?')){
+//     console.log('Yes')
+// };
+
+// let val
+// val = window.outerHeight;
+// val = window.outerWidth;
+
+// val = window.innerHeight;
+// val = window.innerWidth;
+
+// val = window.scrollY;
+
+// val = window.location;
+// val = window.location.port;
+// val = window.location.search;
+
+// // window.location.href = 'http://google.com'
+
+// // window.location.reload();
+
+// // window.history.go(); //bring back to whereever we came from, -1,-2 etc
+// val = window.history.length;
+// val = window.navigator;
+// val = window.navigator.appName;
+// val = window.navigator.appVersion;
+// val = window.navigator.userAgent;
+// val = window.navigator.platform;
+
+// console.log(val);
