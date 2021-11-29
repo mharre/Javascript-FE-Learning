@@ -569,3 +569,87 @@
 // document.querySelector('li:nth-child(4)').textContent='hello';
 
 // DOM ELECTORS: ALL
+// const items = document.getElementsByClassName('collection-item');
+
+// console.log(items[0])
+// items[0].style.color = 'red';
+// items[3].textContent = 'Hello';
+
+// const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
+// console.log(listItems) 
+// //attaching to specific tag name ul, so this is collection-item in UL only
+
+// let lis = document.getElementsByTagName('li');
+
+// console.log(lis[0])
+// lis[0].style.color = 'red';
+// lis[3].textContent = 'Hello';
+
+// lis = Array.from(lis)
+// lis.reverse()
+// lis.forEach(function(li, index){
+//     console.log(li.className)
+//     li.textContent = `${index}: Hello`
+// });
+
+// console.log(lis);
+
+// // QUERY SELECTOR ALL, MAKES NODE LIST SO WE DON"T NEED TO CONVERT TO ARRAY TO DO STUFF
+// const items = document.querySelectorAll('ul.collection li.collection-item');
+// // console.log(items);
+// items.forEach(function(item, index){
+//     item.textContent = `${index}: Text Change`
+// });
+
+// const liOdd = document.querySelectorAll('li:nth-child(odd)');
+// const liEven = document.querySelectorAll('li:nth-child(even)');
+
+// liOdd.forEach(function(li, index){
+//     li.style.background = '#ccc';
+// });
+
+// for(let i = 0; i < liEven.length; i++){
+//     liEven[i].style.background = '#f4f4f4'
+// };
+
+// TRAVERSE THE DOM
+// let val;
+
+// const list = document.querySelector('ul.collection');
+// const listItem = document.querySelector('li.collection-item:first-child');
+
+// val = listItem;
+// val = list;
+
+// // get child nodes, gives all types of nodes not just elements
+// val = list.childNodes;
+// val = list.childNodes[0];
+// val = list.childNodes[0].nodeName;
+// val = list.childNodes[1].nodeType;
+
+// // 1 = Element
+// // 2 = Attribute (deprecated)
+// // 3 = Text Node
+// // 8 = Comment
+// // 9 = Document itself
+// // 10 = Doctype
+
+// val = list.children;
+// val = list.children[0];
+// list.children[0].textContent = 'Hello'
+// val = list.children[3].children[0]
+
+// val = list.firstChild;
+// val = list.firstElementChild;
+
+// val = list.childElementCount;
+
+// val = listItem.parentNode;
+// val = listItem.parentElement.parentElement;
+
+// val = listItem.nextSibling;
+// val = listItem.nextElementSibling;
+
+// val = listItem.previousElementSibling;
+
+// console.log(val);
