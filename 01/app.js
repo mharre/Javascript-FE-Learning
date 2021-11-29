@@ -461,7 +461,7 @@
 
 // while(i<10);
 
-const cars = ['ford', 'acura', 'honda'];
+// const cars = ['ford', 'acura', 'honda'];
 
 // for(let i=0; i<cars.length; i++){
 //     console.log(i, cars[i]);
@@ -527,3 +527,45 @@ const cars = ['ford', 'acura', 'honda'];
 // val = window.navigator.platform;
 
 // console.log(val);
+
+// let val
+
+// val = document;
+// val = document.all;
+// val = document.head;
+// val = document.domain;
+// val = document.URL;
+// val = document.characterSet;
+// val = document.contentType;
+
+// console.log(val);
+
+//DOM SELECTORS: SINGLE
+// console.log(document.getElementById('task-title'));
+
+// console.log(document.getElementById('task-title').id);
+
+// const taskTitle = document.getElementById('task-title');
+
+// //not recommened to do style changes, that is what css if for
+// taskTitle.style.background='#333';
+// taskTitle.style.color='#fff';
+// taskTitle.style.padding='5px';
+// // document.getElementById('task-title').style.display='none';
+
+// taskTitle.textContent ='Task Test';
+// taskTitle.innerText='My Tasks';
+// taskTitle.innerHTML='<span>Testinggg</span>';
+
+// //QUERY SELECTOR (BETTER)
+
+// // console.log(document.querySelector('#task-title'));
+// // console.log(document.querySelector('.card-title'));
+// // console.log(document.querySelector('h5'));
+
+// document.querySelector('li').style.color='red';
+// document.querySelector('li:last-child').style.color='red';
+// document.querySelector('li:nth-child(3)').style.color='red';
+// document.querySelector('li:nth-child(4)').textContent='hello';
+
+// DOM ELECTORS: ALL
