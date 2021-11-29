@@ -653,3 +653,136 @@
 // val = listItem.previousElementSibling;
 
 // console.log(val);
+
+// const li = document.createElement('li');
+// li.className = 'collection-item';
+// li.setAttribute('title', 'New Item');
+// li.appendChild(document.createTextNode('Hello Test'));
+
+// const link = document.createElement('a');
+// link.className = 'delete-item secondary-content';
+// link.innerHTML = '<i class="fa fa-remove"></li>'
+// li.appendChild(link)
+
+// document.querySelector('ul.collection').appendChild(li);
+
+// // REPLACING ELEMENTS
+// const newHeading = document.createElement('h2');
+// newHeading.id = 'task-title';
+// newHeading.appendChild(document.createTextNode('Task List'));
+
+// const oldHeading = document.getElementById('task-title');
+// const cardAction = document.querySelector('.card-action');
+
+// cardAction.replaceChild(newHeading, oldHeading);
+
+// // REMOVE ELEMENT
+// const lis = document.querySelectorAll('li');
+// const list = document.querySelector('ul');
+
+// lis[0].remove();
+// list.removeChild(lis[3]);
+
+// const firstLi = document.querySelector('li:first-child');
+// const link = firstLi.children[0];
+
+// let val;
+
+// val = link.className;
+// val = link.classList;
+// link.classList.add('test');
+// link.classList.remove('test');
+// val = link
+
+// val = link.getAttribute('href');
+// val = link.setAttribute('href', 'https://google.com');
+// val = link.hasAttribute('href');
+// val = link;
+
+// console.log(val);
+
+// EVENT LISTENERS
+// document.querySelector('.clear-tasks').addEventListener('click',
+// function(e){
+//     console.log('Hello World');
+//     e.preventDefault();
+// });
+
+// document.querySelector('.clear-tasks').addEventListener('click',
+// onClick);
+
+// function onClick(e){
+//     // console.log('clicked');
+//     e.preventDefault();
+//     let val;
+
+//     val = e
+//     val = e.target;
+//     val = e.target.id;
+//     val = e.target.className;
+//     val = e.target.classList;
+//     // e.target.innerText = 'hello'
+//     val = e.type;
+//     val = e.timeStamp;
+//     val = e.clientY; //coords relative to the window 
+//     val = e.offsetY; //cords relative to element itself
+
+//     console.log(val);
+// }
+
+// EVENT HANDLERS
+
+// const clearBtn = document.querySelector('.clear-tasks');
+// const card = document.querySelector('.card');
+// const heading = document.querySelector('h5');
+
+// clearBtn.addEventListener('click', runEvent)
+// clearBtn.addEventListener('dblclick', runEvent);
+// clearBtn.addEventListener('mousedown', runEvent);
+// clearBtn.addEventListener('mouseup', runEvent);
+// clearBtn.addEventListener('mouseenter', runEvent);
+// clearBtn.addEventListener('mouseleave', runEvent);
+// clearBtn.addEventListener('mouseover', runEvent);
+// clearBtn.addEventListener('mouseout', runEvent);
+// card.addEventListener('mousemove', runEvent);
+
+// function runEvent(e){
+//     console.log(`EVENT TYPE: ${e.type}`);
+//     e.preventDefault();
+
+//     heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+
+//     document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+// }
+
+// const form = document.querySelector('form');
+// const taskInput = document.getElementById('task');
+// const heading = document.querySelector('h5');
+// const select = document.querySelector('select');
+
+// taskInput.value = '';
+
+// form.addEventListener('submit', runEvent);
+
+// taskInput.addEventListener('keydown', runEvent);
+// taskInput.addEventListener('keyup', runEvent);
+// taskInput.addEventListener('keypress', runEvent);
+// taskInput.addEventListener('focus', runEvent);
+// taskInput.addEventListener('blur', runEvent);
+// taskInput.addEventListener('cut', runEvent);
+// taskInput.addEventListener('paste', runEvent);
+// taskInput.addEventListener('input', runEvent);
+// select.addEventListener('change', runEvent);
+
+// function runEvent(e){
+//     console.log(`EVENT TYPE: ${e.type}`);
+
+    // console.log(e.target.value);
+    // heading.innerText = e.target.value
+    // console.log(taskInput.value);
+
+    // e.preventDefault();
+// }
+
+//EVENT BUBBLING
+
