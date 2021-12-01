@@ -836,27 +836,71 @@
 
 // localStorage.clear();
 // console.log(name, age);
-document.querySelector('form').addEventListener('submit',
-function (e){
-    const task = document.getElementById('task').value;
+// document.querySelector('form').addEventListener('submit',
+// function (e){
+//     const task = document.getElementById('task').value;
 
-    let tasks;
+//     let tasks;
 
-    if(localStorage.getItem('tasks') === null){
-        tasks = [];
-    } else {
-        tasks = JSON.parse(localStorage.getItem('tasks'));
-    }
+//     if(localStorage.getItem('tasks') === null){
+//         tasks = [];
+//     } else {
+//         tasks = JSON.parse(localStorage.getItem('tasks'));
+//     }
 
-    tasks.push(task);
+//     tasks.push(task);
 
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-    alert('task saved!');
+//     localStorage.setItem('tasks', JSON.stringify(tasks));
+//     alert('task saved!');
 
-    e.preventDefault();
-});
+//     e.preventDefault();
+// });
 
-const tasks = JSON.parse(localStorage.getItem('tasks'));
-tasks.forEach(function(task){
-    console.log(task);
-});
+// const tasks = JSON.parse(localStorage.getItem('tasks'));
+// tasks.forEach(function(task){
+//     console.log(task);
+// });
+
+// // OOP CONSTRUCTORS FUNCTIONS / THIS
+
+// function Person(name, dob){
+//     this.name = name;
+//     // this.age = 323;
+//     this.birthday = new Date(dob)
+//     this.calcAge = function(){
+//         const diff = Date.now() - this.birthday.getTime();
+//         const ageDate = new Date(diff);
+//         return Math.abs(ageDate.getUTCFullYear() - 1970);
+//     };
+// }
+
+// // const brad = new Person('Brad')
+
+// // console.log(brad);
+
+// const brad = new Person('Brad', '9-10-81');
+// console.log(brad.calcAge());
+
+// BUILT IN CONSTRUCTORS
+const name1 = 'jeff';
+const name2 = new String('jeff');
+
+// name2.foo = 'bar';
+
+const num1 = 5;
+const num2 = new Number(5);
+console.log(typeof num2);
+
+const bool1 = true;
+const bool2 = new Boolean(true);
+
+const getsum1 = function(x,y){
+    return x + y;
+}
+
+
+const getsum2 = new Function('x','y','return 1 + 1');
+console.log(getsum2(1,1))
+
+const john1 = {name: 'John'};
+const john2 = new Object({name: 'John'})
