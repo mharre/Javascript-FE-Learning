@@ -881,26 +881,91 @@
 // const brad = new Person('Brad', '9-10-81');
 // console.log(brad.calcAge());
 
-// BUILT IN CONSTRUCTORS
-const name1 = 'jeff';
-const name2 = new String('jeff');
+// // BUILT IN CONSTRUCTORS
+// const name1 = 'jeff';
+// const name2 = new String('jeff');
 
-// name2.foo = 'bar';
+// // name2.foo = 'bar';
 
-const num1 = 5;
-const num2 = new Number(5);
-console.log(typeof num2);
+// const num1 = 5;
+// const num2 = new Number(5);
+// console.log(typeof num2);
 
-const bool1 = true;
-const bool2 = new Boolean(true);
+// const bool1 = true;
+// const bool2 = new Boolean(true);
 
-const getsum1 = function(x,y){
-    return x + y;
+// const getsum1 = function(x,y){
+//     return x + y;
+// }
+
+
+// const getsum2 = new Function('x','y','return 1 + 1');
+// console.log(getsum2(1,1))
+
+// const john1 = {name: 'John'};
+// const john2 = new Object({name: 'John'})
+
+// // PROTOTYPES, Object.prototype
+
+// function Person(firstName, lastName, dob){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.birthday = new Date(dob)
+//     
+// }
+
+// Person.prototype.calculateAge = function(){
+//     const diff = Date.now() - this.birthday.getTime();
+//     const ageDate = new Date(diff);
+//     return Math.abs(ageDate.getUTCFullYear() - 1970);
+// };
+
+// Person.prototype.getFullName = function(){
+//     return `${this.firstName} ${this.lastName}`;
+// }
+
+// Person.prototype.getsMarried = function(newLastName){
+//     this.lastName = newLastName;
+// }
+
+// const john = new Person('John', 'Smith', '8-12-90')
+// const mary = new Person('Mary', 'Johnson', '03-20-78')
+
+// console.log(mary);
+// john.getsMarried('Test');
+// console.log(john.getFullName());
+// console.log(mary.hasOwnProperty('firstName'));
+
+function Person(firstName, lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
 }
 
+Person.prototype.greeting = function(){
+    return `Hello ${this.firstName} ${this.lastName}`;
+}
 
-const getsum2 = new Function('x','y','return 1 + 1');
-console.log(getsum2(1,1))
+const person1 = new Person('John', 'Doe');
+// console.log(person1.greeting());
 
-const john1 = {name: 'John'};
-const john2 = new Object({name: 'John'})
+function Customer(firstName, lastName, phone, membership){
+    Person.call(this, firstName, lastName);
+    this.phone = phone;
+    this.membership = membership;
+}
+
+// inheritance of person prototype methods
+Customer.prototype = Object.create(Person.prototype);
+// make customer.prototype return Customer()
+Customer.prototype.constructor = Customer;
+
+const customer1 = new Customer('Tom', 'Smith', '555-555-5555', 'Standard');
+console.log(customer1);
+
+// CUSTOMER GREETING
+Customer.prototype.greeting = function(){
+    return `Hello ${this.firstName} ${this.lastName}, welcome to our company`;
+}
+
+console.log(customer1.greeting());
+console.log(person1.greeting());
