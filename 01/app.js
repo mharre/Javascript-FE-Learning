@@ -936,36 +936,36 @@
 // console.log(john.getFullName());
 // console.log(mary.hasOwnProperty('firstName'));
 
-function Person(firstName, lastName){
-    this.firstName = firstName;
-    this.lastName = lastName;
-}
+// function Person(firstName, lastName){
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+// }
 
-Person.prototype.greeting = function(){
-    return `Hello ${this.firstName} ${this.lastName}`;
-}
+// Person.prototype.greeting = function(){
+//     return `Hello ${this.firstName} ${this.lastName}`;
+// }
 
-const person1 = new Person('John', 'Doe');
+// const person1 = new Person('John', 'Doe');
+// // console.log(person1.greeting());
+
+// function Customer(firstName, lastName, phone, membership){
+//     Person.call(this, firstName, lastName);
+//     this.phone = phone;
+//     this.membership = membership;
+// }
+
+// // inheritance of person prototype methods
+// Customer.prototype = Object.create(Person.prototype);
+// // make customer.prototype return Customer()
+// Customer.prototype.constructor = Customer;
+
+// const customer1 = new Customer('Tom', 'Smith', '555-555-5555', 'Standard');
+// console.log(customer1);
+
+// // CUSTOMER GREETING
+// Customer.prototype.greeting = function(){
+//     return `Hello ${this.firstName} ${this.lastName}, welcome to our company`;
+// }
+
+// console.log(customer1.greeting());
 // console.log(person1.greeting());
-
-function Customer(firstName, lastName, phone, membership){
-    Person.call(this, firstName, lastName);
-    this.phone = phone;
-    this.membership = membership;
-}
-
-// inheritance of person prototype methods
-Customer.prototype = Object.create(Person.prototype);
-// make customer.prototype return Customer()
-Customer.prototype.constructor = Customer;
-
-const customer1 = new Customer('Tom', 'Smith', '555-555-5555', 'Standard');
-console.log(customer1);
-
-// CUSTOMER GREETING
-Customer.prototype.greeting = function(){
-    return `Hello ${this.firstName} ${this.lastName}, welcome to our company`;
-}
-
-console.log(customer1.greeting());
-console.log(person1.greeting());
