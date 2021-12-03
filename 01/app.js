@@ -969,3 +969,80 @@
 
 // console.log(customer1.greeting());
 // console.log(person1.greeting());
+
+// // ALTERNATIVE WAY TO CREATE OBJ's
+// const personPrototypes = {
+//     greeting: function(){
+//         return `Hello ${this.firstName} ${this.lastName}`;
+//     },
+//     getsMarried: function(newLastName){
+//         this.lastName = newLastName;
+//     }
+// }
+
+// const mary = Object.create(personPrototypes);
+// mary.firstName = 'Mary';
+// mary.lastName = 'Smith';
+// mary.age = 30;
+
+// mary.getsMarried('Thompson');
+// console.log(mary.greeting());
+
+// const brad = Object.create(personPrototypes, {
+//     firstName: {value: 'Bob'},
+//     lastName: {value: 'Johnson'},
+//     age: {value:99}
+// });
+// console.log(brad.greeting());
+
+////////////////// CLASSES, OOP(ES6) ///////////////////
+// class Person {
+//     constructor(firstName, lastName, dob){
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.birthday = new Date(dob)
+//     }
+
+//     greeting(){
+//         return `Hello ${this.firstName} ${this.lastName}`
+//     }
+
+//     calcAge(){
+//         const diff = Date.now() - this.birthday.getTime();
+//         const ageDate = new Date(diff);
+//         return Math.abs(ageDate.getUTCFullYear() - 1970);
+//     }
+
+//     getsMarried(newLastName){
+//         this.lastName = newLastName
+//     }
+
+//     static addNums(x,y){
+//         return x + y;
+//     }
+// }
+// const mary = new Person('Mary', 'Smith', '11/13/1880');
+// mary.getsMarried('Random');
+
+// console.log(mary);
+// console.log(Person.addNums(1,2));
+
+////////////////// CLASSES, OOP(ES6), INHERITANCE / SUBCLASS ///////////////////
+class Person {
+    constructor(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    greeting(){
+        return `Hello ${this.firstName} ${this.lastName}`;
+    }
+}
+
+class Customer extends Person {
+    constructor(firstName, lastName, phone, membership){
+        super(firstName, lastName);
+        this.phone = phone;
+        this.membership = membership;
+    }
+}
