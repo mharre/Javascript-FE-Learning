@@ -1045,4 +1045,13 @@ class Customer extends Person {
         this.phone = phone;
         this.membership = membership;
     }
+
+    static getMembershipCost(){
+        return 500;
+    }
 }
+
+const john = new Customer('John', 'Doe', '555-555-5555', 'Standard');
+
+console.log(john.greeting());
+console.log(Customer.getMembershipCost());
