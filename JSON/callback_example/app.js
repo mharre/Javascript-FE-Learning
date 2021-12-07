@@ -26,12 +26,21 @@ const posts = [
 //
 //getPosts();
 
-function createPost(post, callback){
-    //mimic server response time with set timeout
+function createPost(post){
+    return new Promise(function(resolve, reject){
     setTimeout(function(){
         posts.push(post);
-        callback();
+        
+        const error = true;
+
+        if(!error){
+            resolve();
+        } else {
+            reject('Error: Something went wrong');
+        }
+
     }, 2000);
+    });
 }
 
 function getPosts(){
@@ -46,4 +55,7 @@ function getPosts(){
 }
 
 
-createPost({title: 'Post 3', body: 'This is post 3'}, getPosts);
+createPost({title: 'Post 3', body: 'This is post 3'}, getPosts).then
+(getPosts).catch(function(err){
+    console.log(err);
+});
