@@ -451,9 +451,8 @@ const App = (function(ItemCtrl, StorageCtrl, UICtrl){
             if(items.length === 0){
                 UICtrl.hideList();
             } else {
-
-            // populate list with items
-            UICtrl.populateItemList(items); 
+                // populate list with items
+                UICtrl.populateItemList(items); 
             }
 
             // get total calories
