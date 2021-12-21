@@ -1,4 +1,36 @@
 // storage controller
+const StorageCtrl = (function(){
+    // PUBLIC METHODS
+    return {
+        storeItem: function(item){
+            let items;
+            // CHECK IF ANY ITEMS IN LS
+            if(localStorage.getItem('items') === null){
+                items = [];
+                items.push(item);
+
+                // SET LS
+                localStorage.setItem('items', JSON.stringify(items));
+            } else {
+                items = JSON.parse(localStorage.getItem('items'));
+
+                items.push(item);
+
+                // RESET LS
+                localStorage.setItem('items', JSON.stringify(items));
+            }
+        },
+        getItemsFromStorage: function(){
+            let items
+            if(localStorage.getItem('items' === null)){
+                items = [];
+            } else {
+                items = JSON.parse(localStorage.getItem('items'));
+            }
+            return items;
+        }
+    }    
+})();
 
 // item controller
 const ItemCtrl = (function(){
@@ -12,11 +44,7 @@ const ItemCtrl = (function(){
 
     // create datastructure / state
     const data = {
-        items: [
-            //{id: 0, name: 'Steak Dinner', calories: 1200},
-            //{id: 1, name: 'Cookie', calories: 400},
-            //{id: 2, name: 'Eggs', calories: 300}
-        ],
+        items: StorageCtrl.getItemsFromStorage(),
         currItem: null,
         totalCalories: 0
     }
@@ -228,7 +256,7 @@ const UICtrl = (function(){
 })();
 
 // app controller
-const App = (function(ItemCtrl, UICtrl){
+const App = (function(ItemCtrl, StorageCtrl, UICtrl){
 
     const loadEventListeners = function(){
         const UISelectors = UICtrl.getSelectors();
@@ -281,6 +309,8 @@ const App = (function(ItemCtrl, UICtrl){
             // add total calories to ui
             UICtrl.showTotalCalories(totalCalories);
 
+            // STORE IN LS
+            StorageCtrl.storeItem(newItem);
             // clear fields
             UICtrl.clearInput();
         }
@@ -404,7 +434,7 @@ const App = (function(ItemCtrl, UICtrl){
             loadEventListeners();
         }
     }
-})(ItemCtrl,UICtrl);
+})(ItemCtrl, StorageCtrl, UICtrl);
 
 //Initialize App
 App.init();
